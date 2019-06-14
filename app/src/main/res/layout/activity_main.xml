@@ -3,37 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-        <TextView
-            android:text="经度："
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/lng"
-            android:text="           "
-            android:inputType="numberDecimal"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:text="纬度："
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/lat"
-            android:text="           "
-            android:layout_width="85dp"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/loc"
-            android:text="查找"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"/>
-    </LinearLayout>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -44,20 +14,68 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-            <RadioButton
-                android:text="手动定位"
-                android:id="@+id/manual"
-                android:checked="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <RadioButton
-                android:text="GPS定位"
-                android:id="@+id/gps"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </RadioGroup>
+            android:layout_weight="1"></RadioGroup>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经度：" />
+
+        <EditText
+            android:id="@+id/lng"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="           " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纬度：" />
+
+        <EditText
+            android:id="@+id/lat"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="           " />
+
+        <Button
+            android:id="@+id/loc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="查找" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="语音搜索结果" />
+
+        <Button
+            android:id="@+id/btn_startspeech"
+            android:layout_width="71dp"
+            android:layout_height="55dp"
+            android:text="点击按钮语音输入 " />
+
+    </LinearLayout>
+
 
     <com.amap.api.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/map"
